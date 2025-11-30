@@ -113,7 +113,7 @@ There are three primary components to the simulation stack:
 - Ardupilot SITL control
 - ROS navigation logic
 
-For the Unity physics sim, visit [this page](https://github.com/MHSeals/mhseals_asv_sim) and follow the instructions for the setup.
+For the Unity physics sim, visit [this page](https://github.com/1unarzDev/unity_asv_sim) and follow the instructions for the setup.
 
 The ROS packages/nodes you run for navigation are all completely up to you depending on what needs to be tested; however, be sure to always use the `ros_tcp_endpoint` package by running `ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p <arg>:=<value>` (`ROS_IP` and `ROS_TCP_PORT` are useful args for matching the connection with Unity).
 
