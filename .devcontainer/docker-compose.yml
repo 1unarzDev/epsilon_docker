@@ -4,10 +4,10 @@ services:
       context: .
       dockerfile: Dockerfile.dev
       args:
-        USERNAME: ${USER:-roboboat}
+        USERNAME: ${USER:-epsilon}
         USER_UID: ${UID:-1000}
         USER_GID: ${GID:-1000}
-    container_name: roboboat_dev
+    container_name: epsilon_dev
     privileged: true
     network_mode: "host"
     ipc: "host"
@@ -15,14 +15,14 @@ services:
     environment:
       ROS_LOCALHOST_ONLY: "1"
       ROS_DOMAIN_ID: "42"
-      ROS_WS: "/home/${USER}/roboboat_ws"
+      ROS_WS: "/home/${USER}/epsilon_ws"
       DISPLAY: ${DISPLAY}
     volumes:
-      - ${PWD}:/home/${USER}/roboboat_ws
+      - ${PWD}:/home/${USER}/epsilon_ws
       - /tmp/.X11-unix:/tmp/.X11-unix:cached
       - /dev/dri:/dev/dri:cached
     user: "${UID:-1000}:${GID:-1000}"
-    working_dir: /home/${USER}/roboboat_ws
+    working_dir: /home/${USER}/epsilon_ws
   sitl: # Optional component, still working out how to centralize in configuration
     build:
       context: .
@@ -32,7 +32,7 @@ services:
     environment:
       VEHICLE: "Rover"
       DISPLAY: ${DISPLAY}
-      SITL_EXTRA_ARGS: "--console --map --add-param-file=/param/boat.param --model JSON:127.0.0.1 --out tcp:0.0.0.0:5762 "
+      SITL_EXTRA_ARGS: "--console --map --model JSON:127.0.0.1 --out tcp:0.0.0.0:5762"
     volumes:
       - ./boat.param:/param/boat.param:ro
       - /tmp/.X11-unix:/tmp/.X11-unix:cached

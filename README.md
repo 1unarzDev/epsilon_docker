@@ -3,7 +3,7 @@
 Clone the repo (with packages):
 
 ```bash
-git clone --recurse-submodules https://github.com/mhseals/mhseals_docker.git
+git clone --recurse-submodules https://github.com/1unarzDev/epsilon_docker.git
 ```
 
 If you didn't include the recurse-submodules flag, then run to pull each needed submodule:

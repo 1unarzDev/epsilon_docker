@@ -1,5 +1,5 @@
 {
-  "name": "Roboboat Development Container",
+  "name": "Project Epsilon Development Container",
   "dockerComposeFile": [
     "docker-compose.yml",
     "docker-compose.override.yml"
@@ -14,7 +14,7 @@
     "dev"
     // "sitl"
   ],
-  "workspaceFolder": "/home/${env:USER}/roboboat_ws",
+  "workspaceFolder": "/home/${env:USER}/epsilon_ws",
   "postCreateCommand": ".devcontainer/postcreate.sh",
   "remoteUser": "${env:USER}",
   "overrideCommand": true,
