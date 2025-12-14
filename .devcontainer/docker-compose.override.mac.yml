@@ -1,10 +1,6 @@
 services:
-  epsilon:
+  dev:
+    image: lunarzdev/epsilon
     environment:
       DISPLAY: host.docker.internal:0
     volumes: []
-  sitl:
-    environment:
-      DISPLAY: host.docker.internal:0
-    volumes:
-      - ./boat.param:/param/boat.param:ro

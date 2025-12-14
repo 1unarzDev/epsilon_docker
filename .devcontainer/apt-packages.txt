@@ -13,4 +13,3 @@ ros-humble-slam-toolbox
 ros-humble-twist-mux
 ros-humble-xacro
 ros-humble-mavros
-geographiclib-tools

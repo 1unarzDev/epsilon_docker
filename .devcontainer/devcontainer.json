@@ -12,11 +12,10 @@
   "service": "dev",
   "runServices": [
     "dev"
-    // "sitl"
   ],
-  "workspaceFolder": "/home/${env:USER}/epsilon_ws",
+  "workspaceFolder": "/home/epsilon/epsilon_ws",
   "postCreateCommand": ".devcontainer/postcreate.sh",
-  "remoteUser": "${env:USER}",
+  "remoteUser": "epsilon",
   "overrideCommand": true,
   "customizations": {
     "vscode": {

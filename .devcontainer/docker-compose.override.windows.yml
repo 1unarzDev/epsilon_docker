@@ -1,9 +1,15 @@
 services:
+<<<<<<< HEAD
   epsilon:
+=======
+  dev:
+    image: lunarzdev/mhseals-dev-windows
+>>>>>>> upstream/main
     environment:
       DISPLAY: host.docker.internal:0
     volumes: []
   sitl:
+    image: lunarzdev/mhseals-sitl-windows
     environment:
       DISPLAY: host.docker.internal:0
     volumes:

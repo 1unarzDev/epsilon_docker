@@ -14,9 +14,6 @@ sudo apt update -y
 echo "[postcreate] Updating rosdep..."
 rosdep update
 
-echo "[postcreate] Install geoid dataset for mavros..."
-sudo geographiclib-get-geoids egm96-5
-
 echo "[postcreate] Installing workspace dependencies..."
 rosdep install --from-paths src --ignore-src -y \
   --skip-keys="$(tr '\n' ' ' < .devcontainer/package-ignore.txt)"
