@@ -1,3 +1,4 @@
+wiringPi
 ros-humble-joint-state-publisher
 ros-humble-joint-state-publisher-gui
 ros-humble-nav2-bringup
