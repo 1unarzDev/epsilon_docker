@@ -32,6 +32,12 @@ RUN python3 -m venv --system-site-packages /workspace/venv \
     && /workspace/venv/bin/pip install --upgrade pip \
     && /workspace/venv/bin/pip install --no-cache-dir -r requirements.txt
 
+RUN git clone https://github.com/WiringPi/WiringPi.git \
+    && cd WiringPi \
+    && ./build \
+    && cd .. \
+    && rm -rf WiringPi
+
 ENV PATH=/workspace/venv/bin:$PATH
 ENV SHELL=/bin/bash
 
