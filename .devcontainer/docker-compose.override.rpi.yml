@@ -1,6 +1,6 @@
 services:
   dev:
-    image: lunarzdev/mhseals-dev:rpi
+    image: lunarzdev/epsilon-dev:rpi
     build:
       args:
         TARGET_PLATFORM: rpi
@@ -8,7 +8,7 @@ services:
       DISPLAY: host.docker.internal:0
     volumes: []
   sitl:
-    image: lunarzdev/mhseals-sitl:rpi
+    image: lunarzdev/epsilon-sitl:rpi
     environment:
       DISPLAY: host.docker.internal:0
     volumes:
