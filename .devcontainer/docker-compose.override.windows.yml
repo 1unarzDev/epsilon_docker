@@ -1,6 +1,6 @@
 services:
   dev:
-    image: lunarzdev/mhseals-dev:windows
+    image: lunarzdev/epsilon-dev:windows
     build:
       args:
         TARGET_PLATFORM: windows
@@ -8,7 +8,7 @@ services:
       DISPLAY: host.docker.internal:0
     volumes: []
   sitl:
-    image: lunarzdev/mhseals-sitl:windows
+    image: lunarzdev/epsilon-sitl:windows
     environment:
       DISPLAY: host.docker.internal:0
     volumes:

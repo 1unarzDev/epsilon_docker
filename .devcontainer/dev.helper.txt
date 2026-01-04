@@ -10,12 +10,12 @@ source install/setup.bash
 ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=<ip> -p ROS_TCP_PORT:=<port>
 
 --- Launch Commands ---
-ros2 launch mhseals_nav sensors.launch.py
-ros2 launch mhseals_nav odom.launch.py
-ros2 launch mhseals_nav slam_nav.launch.py
+ros2 launch epsilon_nav sensors.launch.py
+ros2 launch epsilon_nav odom.launch.py
+ros2 launch epsilon_nav slam_nav.launch.py
 
 --- Complete Launch File ---
-ros2 launch mhseals_nav robot.launch.py
+ros2 launch epsilon_nav robot.launch.py
 
 --- ZED Camera Optimization ---
 sudo -E ZED_Diagnostic -aio

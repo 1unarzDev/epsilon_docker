@@ -1,6 +1,6 @@
 services:
   dev:
-    image: lunarzdev/mhseals-dev:nvidia
+    image: lunarzdev/epsilon-dev:nvidia
     build:
       args:
         TARGET_PLATFORM: nvidia
@@ -15,6 +15,6 @@ services:
           devices:
             - capabilities: [gpu]
   sitl:
-    image: lunarzdev/mhseals-sitl:nvidia
+    image: lunarzdev/epsilon-sitl:nvidia
 volumes:
   zed_resources:

@@ -1,17 +1,17 @@
 services:
   dev:
-    image: lunarzdev/mhseals-dev:linux
+    image: lunarzdev/epsilon-dev:linux
     pull_policy: missing
     build:
       context: .
       dockerfile: Dockerfile.dev
       args:
-        USERNAME: roboboat
+        USERNAME: robosub
         USER_UID: ${UID-1000}
         USER_GID: ${GID-1000}
         TARGET_PLATFORM: linux
         BASE_IMAGE: ros:humble
-    container_name: roboboat_dev
+    container_name: robosub_dev
     privileged: true
     network_mode: "host"
     ipc: "host"
@@ -19,16 +19,16 @@ services:
     environment:
       ROS_LOCALHOST_ONLY: "1"
       ROS_DOMAIN_ID: "42"
-      ROS_WS: "/home/roboboat/roboboat_ws"
+      ROS_WS: "/home/robosub/robosub_ws"
       DISPLAY: ${DISPLAY}
     volumes:
-      - ${PWD}:/home/roboboat/roboboat_ws
+      - ${PWD}:/home/robosub/robosub_ws
       - /tmp/.X11-unix:/tmp/.X11-unix:cached
       - /dev:/dev 
     user: "${UID:-1000}:${GID:-1000}"
-    working_dir: /home/roboboat/roboboat_ws
+    working_dir: /home/robosub/robosub_ws
   sitl:
-    image: lunarzdev/mhseals-sitl:linux
+    image: lunarzdev/epsilon-sitl:linux
     pull_policy: missing
     build:
       context: .

@@ -35,11 +35,11 @@ elif [ "${VARIANT}" = "garden" ]; then
 
   # Add necessary environment variables
   USER_HOME="/home/${_REMOTE_USER:-vscode}"
-  echo 'export GZ_SIM_RESOURCE_PATH="$HOME/roboboat_ws/src/asv_wave_sim/gz-waves-models/models:$HOME/roboboat_ws/src/asv_wave_sim/gz-waves-models/world_models:$HOME/roboboat_ws/src/asv_wave_sim/gz-waves-models/worlds"' >> "$USER_HOME/.bashrc"
-  echo 'export GZ_SIM_SYSTEM_PLUGIN_PATH="$HOME/roboboat_ws/install/lib"' >> "$USER_HOME/.bashrc"
-  echo 'export LD_LIBRARY_PATH="$HOME/roboboat_ws/install/lib:$LD_LIBRARY_PATH"' >> "$USER_HOME/.bashrc"
+  echo 'export GZ_SIM_RESOURCE_PATH="$HOME/robosub_ws/src/asv_wave_sim/gz-waves-models/models:$HOME/robosub_ws/src/asv_wave_sim/gz-waves-models/world_models:$HOME/robosub_ws/src/asv_wave_sim/gz-waves-models/worlds"' >> "$USER_HOME/.bashrc"
+  echo 'export GZ_SIM_SYSTEM_PLUGIN_PATH="$HOME/robosub_ws/install/lib"' >> "$USER_HOME/.bashrc"
+  echo 'export LD_LIBRARY_PATH="$HOME/robosub_ws/install/lib:$LD_LIBRARY_PATH"' >> "$USER_HOME/.bashrc"
 
-  echo "$USER_HOME/roboboat_ws/install/lib" | sudo tee /etc/ld.so.conf.d/roboboat_ws.conf
+  echo "$USER_HOME/robosub_ws/install/lib" | sudo tee /etc/ld.so.conf.d/robosub_ws.conf
   sudo ldconfig
 else
     echo "[INFO] None/unsupported version selected, skipping Gazebo installation installation..." 

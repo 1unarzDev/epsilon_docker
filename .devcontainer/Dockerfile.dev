@@ -33,7 +33,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
 # Prepare installation and work environment
-WORKDIR /home/${USERNAME}/roboboat_ws
+WORKDIR /home/${USERNAME}/robosub_ws
 COPY requirements.txt .
 COPY apt-packages.txt .
 COPY package-ignore.txt .

@@ -1,4 +1,4 @@
-# Contributing to mhseals_docker
+# Contributing to epsilon_docker
 
 This guide will help you understand our code style, paradigms, and best practices to ensure consistency and maintainability.
 
@@ -23,7 +23,7 @@ import sys
 import numpy as np
 import rclpy
 
-from mhsboat_ctrl.tasks import Task
+from epsilon_nav.tasks import Task
 ```
 
 ### Typing

@@ -1,6 +1,6 @@
 services:
   dev:
-    image: lunarzdev/mhseals-sitl:mac
+    image: lunarzdev/epsilon-sitl:mac
     build:
       args:
         TARGET_PLATFORM: mac
@@ -8,7 +8,7 @@ services:
       DISPLAY: host.docker.internal:0
     volumes: []
   sitl:
-    image: lunarzdev/mhseals-sitl:mac
+    image: lunarzdev/epsilon-sitl:mac
     environment:
       DISPLAY: host.docker.internal:0
     volumes:
